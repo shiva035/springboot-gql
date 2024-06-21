@@ -1,0 +1,16 @@
+type Product{
+    id:ID,
+    name:String,
+    category:String,
+    price:Float,
+    qty:Int
+}
+
+type Query{
+    getProducts:[Product],
+    getProductsByCategory(category:String):[Product]
+}
+
+type  Mutation{
+    updateStock(id:ID,qty:Int):Product
+}
